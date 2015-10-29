@@ -1,0 +1,112 @@
+﻿@model IEnumerable<WebApplication4.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dinner.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.courseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.courseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recipe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zipcode)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dinner.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicationUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.courseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recipe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zipcode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.courseID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.courseID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.courseID })
+            </td>
+        </tr>
+    }
+</table>
+
+<!-- Google Maps Scripting -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+    // Initialize the Map details.
+    function initialize() {
+
+        // center of map
+        var mapCenter = new google.maps.LatLng(68.648032059917, -186.8319633375);
+
+        // initialize map properties
+        var mapProp = {
+            center: mapCenter,
+            zoom: 4,
+            mapTypeId: google.maps.MapTypeId.ROADMAP // types include ROADMAP, SATELLITE, HYBRID, and TERRAIN
+        };
+
+        // get the map
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        // add a markers to the map
+        var marker = new google.maps.Marker({ position: new google.maps.LatLng(36.106796, -112.113306), map: map });
+        var marker = new google.maps.Marker({ position: new google.maps.LatLng(45.576, -122.1154), map: map });
+        var marker = new google.maps.Marker({ position: new google.maps.LatLng(44.715935, -122.446831), map: map });
+        var marker = new google.maps.Marker({ position: new google.maps.LatLng(44.8512, -122.6462), map: map });
+        var marker = new google.maps.Marker({ position: new google.maps.LatLng(37.298215, -113.026255), map: map });
+    }
+
+    // display the map
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>

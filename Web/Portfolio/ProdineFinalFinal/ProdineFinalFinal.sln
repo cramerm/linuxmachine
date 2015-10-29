@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication4", "WebApplication4\WebApplication4.csproj", "{66CD0611-0F0E-4F8F-91CF-97AC0443C66C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{1E9E6295-8770-44A9-BEB2-5A20421E2AD7}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{229B68D5-B398-4E14-ABBE-CE8FA8A32534}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\WebApplication4-WAWS-dev.json = PublishScripts\Configurations\WebApplication4-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vaultcomputing.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebApplication4\\WebApplication4.csproj
+		SccProjectName1 = WebApplication4
+		SccLocalPath1 = WebApplication4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66CD0611-0F0E-4F8F-91CF-97AC0443C66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CD0611-0F0E-4F8F-91CF-97AC0443C66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CD0611-0F0E-4F8F-91CF-97AC0443C66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CD0611-0F0E-4F8F-91CF-97AC0443C66C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{229B68D5-B398-4E14-ABBE-CE8FA8A32534} = {1E9E6295-8770-44A9-BEB2-5A20421E2AD7}
+	EndGlobalSection
+EndGlobal

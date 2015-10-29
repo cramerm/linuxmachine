@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sample.sample" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ProRead"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <activity
+            android:name=".MainActivity"
+            android:label="ProRead" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShowBooks"
+            android:label="@string/title_activity_show_books" >
+            <intent-filter>
+                <action android:name="com.example.sample.sample.ShowBooksActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HowToActivity"
+            android:label="@string/title_activity_how_to" >
+            <intent-filter>
+                <action android:name="com.example.sample.sample.HowToActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChooseSpeed"
+            android:label="@string/title_activity_choose_speed" >
+            <intent-filter>
+                <action android:name="com.example.sample.sample.ChooseSpeed" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReadActivity"
+            android:label="@string/title_activity_read" >
+        </activity>
+    </application>
+
+</manifest>

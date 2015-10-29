@@ -1,0 +1,78 @@
+﻿@model IEnumerable<WebApplication4.Models.Dinner>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dinnerMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dinnerDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dinnerYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfCourses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberAttending)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dinnerMonth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dinnerDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dinnerYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfCourses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberAttending)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.dinnerID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.dinnerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.dinnerID })
+                @Html.ActionLink("Attending Participants", "AttendingParticipants", new { id = item.dinnerID })
+            </td>
+        </tr>
+    }
+
+</table>
